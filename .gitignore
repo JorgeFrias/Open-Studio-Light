@@ -3,3 +3,5 @@ OpenStudioLight.vcxproj
 __vm/
 OpenStudioLight.vcxproj.filters
 Release/
+*.dwl2
+*.dwl
