@@ -22,8 +22,10 @@ int ledPin = 0;
 */
 void ledValue(int value)
 {
+	// The range is 0-255
+	int val = map(value, 0, 1023, 0, 255);  //Scales 0-1023 to 0-255 (or whatever you want)
 	// The driver works inverted
-	int writeVal = 1023 - value;
+	int writeVal = 255 - val;
 	analogWrite(ledPin, writeVal);
 }
 
@@ -37,26 +39,7 @@ void setup()
 // Add the main program code into the continuous loop() function
 void loop()
 {
-	//value = analogRead(potPin);    // read the value from the sensor
-	//ledValue(value);
-	//delay(100);
-
-	// TEST
-	ledValue(200);
-	delay(1000);
-
-	ledValue(300);
-	delay(1000);
-
-	ledValue(500);
-	delay(1000);
-
-	ledValue(800);
-	delay(1000);
-
-	ledValue(1000);
-	delay(1000);
-
-	ledValue(0);
-	delay(100);
+	value = analogRead(potPin);    // Read the value from the sensor
+	ledValue(value);
+	delay(10);
 }
