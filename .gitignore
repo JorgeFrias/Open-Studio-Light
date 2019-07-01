@@ -5,3 +5,7 @@ OpenStudioLight.vcxproj.filters
 Release/
 *.dwl2
 *.dwl
+3DModels/Example Model/Cristal.stl
+3DModels/Example Model/Frame.stl
+3DModels/Example Model/Back.stl
+*.blend1
